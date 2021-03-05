@@ -145,6 +145,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "levi9-test"
+    }
+  },
+  "defaultProject": "levi9-test",
+  "cli": {
+    "analytics": false
+  }
 }
