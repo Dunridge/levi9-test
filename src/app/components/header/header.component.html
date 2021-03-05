@@ -1,0 +1,6 @@
+<div class="header">
+  <div class="header__title" routerLink="/users">Levi9 Test</div>
+  <div class="header__navigation">
+    <div *ngFor="let item of items" class="header__nav-item" [routerLink]="item.link" routerLinkActive="header--active">{{ item.title }}</div>
+  </div>
+</div>
