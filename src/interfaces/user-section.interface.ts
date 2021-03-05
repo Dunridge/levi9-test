@@ -1,5 +1,5 @@
 
-export interface UserSection {
+export interface Section {
   placeholder: string;
   value: string | number;
 }
