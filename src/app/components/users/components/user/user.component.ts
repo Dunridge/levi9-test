@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {User} from '../../../../../interfaces/user.interface';
-import {UserSection} from '../../../../../interfaces/user-section.interface';
+import {Section} from '../../../../../interfaces/user-section.interface';
 
 @Component({
   selector: 'app-user',
@@ -9,7 +9,7 @@ import {UserSection} from '../../../../../interfaces/user-section.interface';
 })
 export class UserComponent implements OnInit{
   @Input() user: User;
-  sections: UserSection[];
+  sections: Section[];
 
   ngOnInit(): void {
     this.sections = [
