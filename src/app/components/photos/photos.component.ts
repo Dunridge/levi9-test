@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
+import {PhotosService} from '../../../services/photos.service';
 
 @Component({
   selector: 'app-photos',
@@ -9,11 +9,11 @@ import {HttpClient} from '@angular/common/http';
 export class PhotosComponent implements OnInit {
 
   constructor(
-    private httpClient: HttpClient
+    private photosService: PhotosService
   ) { }
 
   ngOnInit(): void {
-    this.httpClient.get('https://jsonplaceholder.typicode.com/photos')
+    this.photosService.getPhotos()
       .subscribe(photos => console.log(photos));
   }
 

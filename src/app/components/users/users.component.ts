@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
 import {User} from '../../../interfaces/user.interface';
+import {UsersService} from '../../../services/users.service';
 
 @Component({
   selector: 'app-users',
@@ -11,15 +11,12 @@ export class UsersComponent implements OnInit {
   users: User[];
 
   constructor(
-    private httpClient: HttpClient
+    public usersService: UsersService
   ) {
   }
 
   ngOnInit(): void {
-    this.httpClient.get<User[]>('https://jsonplaceholder.typicode.com/users')
-      .subscribe(users => {
-        this.users = users;
-        console.log(this.users);
-      });
+    this.usersService.getUsers()
+      .subscribe(users => this.users = users);
   }
 }

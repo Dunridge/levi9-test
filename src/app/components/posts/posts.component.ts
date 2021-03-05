@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
+import {PostsService} from '../../../services/posts.service';
 
 @Component({
   selector: 'app-posts',
@@ -9,12 +9,11 @@ import {HttpClient} from '@angular/common/http';
 export class PostsComponent implements OnInit {
 
   constructor(
-    private httpClient: HttpClient
+    private postsService: PostsService
   ) { }
 
   ngOnInit(): void {
-    this.httpClient.get('https://jsonplaceholder.typicode.com/posts')
-      .subscribe(posts => console.log(posts));
+      this.postsService.getPosts()
+        .subscribe(posts => console.log(posts));
   }
-
 }
