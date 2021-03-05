@@ -2,4 +2,18 @@
 
 .user {
   margin: 40px 0;
+  padding: 36px 36px;
+  background-color: $user-color;
+  width: $user-width;
+  height: $user-height;
+  border-radius: 10px;
+
+  &__statistic {
+    display: flex;
+  }
+
+  &__placeholder {
+    margin-right: 4px;
+    font-weight: bolder;
+  }
 }
