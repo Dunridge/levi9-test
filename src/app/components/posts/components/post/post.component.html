@@ -1,6 +1,9 @@
-<div class="post">
-  <div class="post__statistic" *ngFor="let section of sections">
+<mat-card class="post">
+  <mat-card-content class="post__statistic" *ngFor="let section of sections">
     <div class="post__placeholder">{{section.placeholder}}:</div>
     <div class="post__title">{{section.value}}</div>
-  </div>
-</div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="like()">LIKE</button>
+  </mat-card-actions>
+</mat-card>

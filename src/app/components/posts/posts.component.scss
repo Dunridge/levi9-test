@@ -7,4 +7,10 @@
   align-items: center;
   margin: 0 auto;
   background-color: $body-color;
+
+  background-image: url("~src/assets/images/users_wallpaper.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

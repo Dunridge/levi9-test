@@ -1,6 +1,9 @@
-<div class="user">
-  <div class="user__statistic" *ngFor="let section of sections">
+<mat-card class="user">
+  <mat-card-content class="user__statistic" *ngFor="let section of sections">
     <div class="user__placeholder">{{section.placeholder}}:</div>
     <div class="user__title">{{section.value}}</div>
-  </div>
-</div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="like()">LIKE</button>
+  </mat-card-actions>
+</mat-card>

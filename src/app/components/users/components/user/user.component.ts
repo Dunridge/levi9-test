@@ -12,6 +12,10 @@ export class UserComponent implements OnInit{
   @Input() user: User;
   sections: Section[];
 
+  like(): void {
+    console.log('user liked');
+  }
+
   ngOnInit(): void {
     this.sections = [
       {
