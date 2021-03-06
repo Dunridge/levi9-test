@@ -12,6 +12,10 @@ export class PostComponent implements OnInit {
   @Input() post: Post;
   sections: Section[];
 
+  like(): void {
+    console.log('post liked');
+  }
+
   ngOnInit(): void {
     this.sections = [
       {
