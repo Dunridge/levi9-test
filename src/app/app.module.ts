@@ -10,6 +10,7 @@ import { PhotosComponent } from './components/photos/photos.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { UserComponent } from './components/users/components/user/user.component';
 import { PostComponent } from './components/posts/components/post/post.component';
+import { PhotoComponent } from './components/photos/components/photo/photo.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PostComponent } from './components/posts/components/post/post.component
     PhotosComponent,
     PostsComponent,
     UserComponent,
-    PostComponent
+    PostComponent,
+    PhotoComponent
   ],
   imports: [
     BrowserModule,
