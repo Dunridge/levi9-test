@@ -1,9 +1,20 @@
 
-
 //triadic color scheme
-$main-color: #5f44bb;
-$secondary-color: #bb5f44;
-$tertiary-color: #44bb5f;
+// v1
+//$main-color: #5f44bb;
+//$secondary-color: #bb5f44;
+//$tertiary-color: #44bb5f;
+
+// v2
+//$main-color: #493EC1;
+//$secondary-color: #ab6054;
+//$tertiary-color: #54ab60;
+
+// v3
+$main-color: #5F5EA1;
+$secondary-color: #A15F5E;
+$tertiary-color: #5EA15F;
+
 
 $header-color: $main-color;
 $body-color: $secondary-color;
