@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from '../../../interfaces/user.interface';
 import {UsersService} from '../../services/users.service';
+import {Store} from '@ngrx/store';
+import {AppState} from '../../store/models/app-state.model';
 
 @Component({
   selector: 'app-users',
@@ -11,7 +13,8 @@ export class UsersComponent implements OnInit {
   users: User[];
 
   constructor(
-    public usersService: UsersService
+    public usersService: UsersService,
+    private store: Store<AppState>
   ) {
   }
 
