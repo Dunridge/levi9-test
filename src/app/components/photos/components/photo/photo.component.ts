@@ -9,4 +9,8 @@ import {Photo} from '../../../../../interfaces/photo.interface';
 })
 export class PhotoComponent {
   @Input() photo: Photo;
+
+  like(): void {
+    console.log('photo liked');
+  }
 }
