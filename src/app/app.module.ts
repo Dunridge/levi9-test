@@ -14,6 +14,7 @@ import {PhotoComponent} from './components/photos/components/photo/photo.compone
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {MatButtonModule} from '@angular/material/button';
     PostsComponent,
     UserComponent,
     PostComponent,
-    PhotoComponent
+    PhotoComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
