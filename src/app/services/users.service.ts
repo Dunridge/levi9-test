@@ -1,19 +1,19 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {User} from '../../interfaces/user.interface';
 import {Observable} from 'rxjs';
-import {Photo} from '../interfaces/photo.interface';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PhotosService {
+export class UsersService {
 
   constructor(
     private httpClient: HttpClient
   ) {
   }
 
-  getPhotos(): Observable<Photo[]> {
-    return this.httpClient.get<Photo[]>('https://jsonplaceholder.typicode.com/photos');
+  getUsers(): Observable<User[]> {
+    return this.httpClient.get<User[]>('https://jsonplaceholder.typicode.com/users');
   }
 }
