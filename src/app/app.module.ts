@@ -14,13 +14,15 @@ import {PhotoComponent} from './components/photos/components/photo/photo.compone
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
-import { FavoritesComponent } from './components/favorites/favorites.component';
+import {FavoritesComponent} from './components/favorites/favorites.component';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 import {UsersReducer} from './store/reducers/users.reducer';
 import {environment} from '../environments/environment';
 import {UsersEffects} from './store/effects/users.effects';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {PostsReducer} from './store/reducers/posts.reducer';
+import {PostsEffects} from './store/effects/posts.effects';
 
 @NgModule({
   declarations: [
@@ -43,10 +45,14 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
     MatCardModule,
     MatButtonModule,
     StoreModule.forRoot({
-      usersState: UsersReducer
+      usersState: UsersReducer,
+      postsState: PostsReducer
     }),
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
-    EffectsModule.forRoot([UsersEffects])
+    EffectsModule.forRoot([
+      UsersEffects,
+      PostsEffects
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
