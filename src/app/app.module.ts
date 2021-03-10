@@ -23,6 +23,8 @@ import {UsersEffects} from './store/effects/users.effects';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {PostsReducer} from './store/reducers/posts.reducer';
 import {PostsEffects} from './store/effects/posts.effects';
+import {PhotosReducer} from './store/reducers/photos.reducer';
+import {PhotosEffects} from './store/effects/photos.effects';
 
 @NgModule({
   declarations: [
@@ -46,12 +48,14 @@ import {PostsEffects} from './store/effects/posts.effects';
     MatButtonModule,
     StoreModule.forRoot({
       usersState: UsersReducer,
-      postsState: PostsReducer
+      postsState: PostsReducer,
+      photosState: PhotosReducer
     }),
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
     EffectsModule.forRoot([
       UsersEffects,
-      PostsEffects
+      PostsEffects,
+      PhotosEffects
     ])
   ],
   providers: [],
