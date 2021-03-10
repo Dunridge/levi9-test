@@ -15,6 +15,12 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { FavoritesComponent } from './components/favorites/favorites.component';
+import {StoreModule} from '@ngrx/store';
+import {EffectsModule} from '@ngrx/effects';
+import {UsersReducer} from './store/reducers/users.reducer';
+import {environment} from '../environments/environment';
+import {UsersEffects} from './store/effects/users.effects';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -35,7 +41,12 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
     HttpClientModule,
     NoopAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    StoreModule.forRoot({
+      users: UsersReducer
+    }),
+    StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
+    EffectsModule.forRoot([UsersEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
