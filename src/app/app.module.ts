@@ -43,7 +43,7 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
     MatCardModule,
     MatButtonModule,
     StoreModule.forRoot({
-      users: UsersReducer
+      usersState: UsersReducer
     }),
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
     EffectsModule.forRoot([UsersEffects])
